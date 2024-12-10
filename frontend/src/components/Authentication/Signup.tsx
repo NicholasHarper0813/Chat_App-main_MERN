@@ -9,7 +9,6 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 const Signup = () => {
-  // Access environment variables
   const cloudinaryUploadPreset =
     process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET ?? "";
   const cloudinaryCloudName =
@@ -79,8 +78,8 @@ const Signup = () => {
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
       await router.push("/chats");
-    } catch (error: any) {
-      // add type annotation here
+    } 
+    catch (error: any) {
       toast({
         title: "Error Occurred!",
         description: error.response.data.message,
