@@ -60,7 +60,6 @@ const Login = () => {
       setPicLoading(false);
       await router.push("/chats");
     } catch (error: any) {
-      // add type annotation here
       toast({
         title: "Error Occurred!",
         description: error.response.data.message,
