@@ -4,7 +4,6 @@ import axios from "axios";
 interface Chat {
   _id: string;
   chatName: string;
-  // ... other properties of the chat data
 }
 
 const ChatPage = () => {
